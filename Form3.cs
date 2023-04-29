@@ -34,5 +34,26 @@ namespace WinFormsApp1
             Properties.Settings.Default.Save();
             this.Close();
         }
+
+        private void BtnSeePwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            TBPassword.PasswordChar = new char();
+        }
+        private void BtnSeePwd_KeyUp(object sender, KeyEventArgs e)
+        {
+            TBPassword.PasswordChar = '*';
+        }
+
+        private void BtnSeePwd_MouseDown(object sender, MouseEventArgs e)
+        {
+            TBPassword.PasswordChar = new char();
+        }
+
+        private void BtnSeePwd_MouseUp(object sender, MouseEventArgs e)
+        {
+            TBPassword.PasswordChar = '*';
+        }
+
+
     }
 }

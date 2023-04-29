@@ -39,6 +39,7 @@ namespace WinFormsApp1
             this.TBAccount = new System.Windows.Forms.TextBox();
             this.LBPassword = new System.Windows.Forms.Label();
             this.TBPassword = new System.Windows.Forms.TextBox();
+            this.BtnSeePwd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LBSetSavePath
@@ -65,7 +66,6 @@ namespace WinFormsApp1
             this.BtnBrowser.TabIndex = 2;
             this.BtnBrowser.Text = "瀏覽";
             this.BtnBrowser.UseVisualStyleBackColor = true;
-            //this.BtnBrowser.Click += new System.EventHandler(this.BtnBrowser_Click);
             // 
             // BtnConfirm
             // 
@@ -114,16 +114,30 @@ namespace WinFormsApp1
             // 
             // TBPassword
             // 
-            this.TBPassword.Location = new System.Drawing.Point(119, 163);
+            this.TBPassword.Location = new System.Drawing.Point(119, 168);
             this.TBPassword.Name = "TBPassword";
+            this.TBPassword.PasswordChar = '*';
             this.TBPassword.Size = new System.Drawing.Size(257, 23);
             this.TBPassword.TabIndex = 8;
+            // 
+            // BtnSeePwd
+            // 
+            this.BtnSeePwd.Location = new System.Drawing.Point(338, 168);
+            this.BtnSeePwd.Name = "BtnSeePwd";
+            this.BtnSeePwd.Size = new System.Drawing.Size(38, 23);
+            this.BtnSeePwd.TabIndex = 9;
+            this.BtnSeePwd.UseVisualStyleBackColor = true;
+            this.BtnSeePwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BtnSeePwd_KeyDown);
+            this.BtnSeePwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.BtnSeePwd_KeyUp);
+            this.BtnSeePwd.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnSeePwd_MouseDown);
+            this.BtnSeePwd.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnSeePwd_MouseUp);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnSeePwd);
             this.Controls.Add(this.TBPassword);
             this.Controls.Add(this.LBPassword);
             this.Controls.Add(this.TBAccount);
@@ -152,5 +166,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.TextBox TBAccount;
         private System.Windows.Forms.Label LBPassword;
         private System.Windows.Forms.TextBox TBPassword;
+        private System.Windows.Forms.Button BtnSeePwd;
     }
 }
